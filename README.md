@@ -15,11 +15,9 @@ pip install -r requirements.txt
 
 ## 2. Prepare Dataset & Checkpoints
 
-<!-- - CelebA: download and extract the [CelebA](https://www.kaggle.com/datasets/jessicali9530/celeba-dataset?resource=download-directory). Then, place the `img_align_celeba` folder to `.\datasets\celeba`
-
-- FFHQ: download and extract the [FFHQ](https://www.kaggle.com/datasets/greatgamedota/ffhq-face-data-set). Then, place the `thumbnails128x128` folder to `.\datasets\ffhq` -->
-
-* Download `datasets.zip` and `checkpoints.zip` from https://drive.google.com/drive/folders/1aab4DJKX7g_-IGWBpgo98EWi-fQuGPT0?usp=share_link
+- We follow GMI/KEDMI/LOMMA to prepare dataset
+- Please find the checkpoint in the [release tag](https://github.com/hosytuyen/TL-DMI/releases/tag/v1.0)
+  
 * Extract and place the two folders at `.\datasets` and `.\checkpoints`
   
 
