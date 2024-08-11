@@ -1,5 +1,9 @@
 # Model Inversion Robustness: Can Transfer Learning help?
 
+Other version: https://github.com/ffhibnese/Model-Inversion-Attack-ToolBox
+
+Many thanks to owner of this repository in intergrating our method to their MI toolbox.
+
 ## 1. Setup Environment
 This code has been tested with Python 3.7, PyTorch 1.11.0 and Cuda 11.3. 
 
