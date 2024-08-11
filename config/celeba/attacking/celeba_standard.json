@@ -1,0 +1,36 @@
+{
+    "dataset":{
+        "model_name": "VGG16",
+        "test_file_path": "./datasets/celeba/meta/testset.txt",
+        "name": "celeba",
+        "img_path": "./datasets/celeba/img_align_celeba",
+        "n_classes":1000,
+        "batch_size": 64,
+        "fid_real_path": "./datasets/celeba/meta/celeba_target_300ids.npy",
+        "KNN_real_path": "./datasets/celeba/meta/fea_target_300ids.npy",
+        "p_reg_path": "./checkpoints/download/p_reg",
+        "img_gan_path": "./datasets/celeba/img_align_celeba",
+        "gan_file_path": "./datasets/celeba/meta/ganset.txt"
+    },
+
+    "train":{
+        "model_types": "VGG16",
+        "type": [],
+        "cls_ckpts": "/content/gdrive/MyDrive/NIPS23-Submission/Code/checkpoints/Target-Classifier/TL/VGG16/VGG16-IN1K-celeba-26/checkpoints/VGG16_best.tar",      
+        "num_seeds": 5,
+        "Nclass": 300,
+        "gan_model_dir": "/content/gdrive/MyDrive/NIPS23-Submission/Code/checkpoints/Target-Classifier/TL/VGG16/VGG16-IN1K-celeba-26/KEDMI-GAN",
+        "eval_model": "FaceNet",
+        "eval_dir": "/content/gdrive/MyDrive/NIPS23-Submission/Code/checkpoints/Evaluation-Model/FaceNet_95.88.tar"
+        },
+
+    "attack":{
+        "method": "kedmi",
+        "variant": "baseline",
+        "iters_mi": 3000,
+        "lr": 0.02,
+        "lam": 1.0,
+        "same_z":"",
+        "eval_metric": "acc"
+    }
+}

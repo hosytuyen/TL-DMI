@@ -1,0 +1,126 @@
+{
+    "root_path":"./checkpoints/target_model/TL/VGG16/third_1-run",
+
+    "dataset":{
+      "name":"celeba",
+      "train_file_path":"./datasets/celeba/meta/trainset.txt",
+      "test_file_path":"./datasets/celeba/meta/testset.txt",
+      "img_path": "./datasets/celeba/img",
+      "model_name":"VGG16",
+      "mode":"reg",
+      "n_classes":1000,
+      "device":"cuda"
+    },
+
+    "VGG-R":{
+      "epochs":300,
+      "batch_size":128,
+      "instance":4,
+      "lr":0.0001,
+      "resume":"",
+      "type":[64, "M", 128, "M", 256, "M", 512, "M", 512, "M"]      
+    },
+
+    "EfficientNetB0":{
+      "epochs":50,
+      "batch_size":64,
+      "instance":4,
+      "lr":1e-2,
+      "momentum":0.9,
+      "weight_decay":1e-4,
+      "gamma":0.2,
+      "adjust_epochs":[20, 35],
+      "resume":""      
+    },
+
+    "VGG16":{
+      "epochs":200,
+      "batch_size":64,
+      "instance":4,
+      "lr":8e-2,
+      "momentum":0.9,
+      "weight_decay":1e-4,
+      "gamma":0.2,
+      "adjust_epochs":[20, 35],
+      "resume":"checkpoints/target_model/TL/VGG16_LR/VGG16-IN1K-celeba-fc/VGG16_best.tar",
+      "public_dataset": "IN1K",
+      "freeze_layers": 26
+    },
+
+
+    "FaceNet":{
+      "epochs":30,
+      "batch_size":64,
+      "instance":4,
+      "lr":1e-2,
+      "momentum":0.9,
+      "weight_decay":1e-4,
+      "adjust_lr":[1e-3, 1e-4],
+      "adjust_epochs":[15, 25],
+      "resume":"./checkpoints/download/backbone/backbone_ir50_ms1m_epoch120.pth"
+    },
+
+    "FaceNet_all":{
+      "epochs":100,
+      "batch_size":64,
+      "instance":4,
+      "lr":1e-2,
+      "momentum":0.9,
+      "weight_decay":1e-4,
+      "adjust_lr":[1e-3, 1e-4],
+      "adjust_epochs":[15, 25],
+      "resume":"./checkpoints/download/backbone/backbone_ir50_ms1m_epoch120.pth"
+    },
+
+    "FaceNet64":{
+      "epochs":200,
+      "batch_size":8,
+      "lr":8e-3,
+      "momentum":0.9,
+      "weight_decay":1e-4,
+      "lrdecay_epoch":10,
+      "lrdecay":0.1,
+      "resume":"./checkpoints/download/backbone/backbone_ir50_ms1m_epoch120.pth",
+      "freeze_layers": 5
+    },
+
+    "IR152":{
+      "epochs":100,
+      "batch_size":64,
+      "lr":1e-2,
+      "momentum":0.9,
+      "weight_decay":1e-4,
+      "lrdecay_epoch":10,
+      "lrdecay":0.1,
+      "resume":"./checkpoints/download/backbone/Backbone_IR_152_Epoch_112_Batch_2547328_Time_2019-07-13-02-59_checkpoint.pth",
+      "freeze_layers": 46
+    },
+
+    "IR50":{
+      "epochs":40,
+      "batch_size":64,
+      "lr":1e-2,
+      "momentum":0.9,
+      "weight_decay":1e-4,
+      "lrdecay_epoch":10,
+      "lrdecay":0.1,
+      "resume":"./checkpoints/download/backbone/ir50.pth"
+    },
+
+    "Resnet-R":{
+      "epochs": 250,
+      "batch_size": 32,
+      "instance": 4,
+      "lr": 1e-2,
+      "momentum": 0.9,
+      "weight_decay": 1e-4,
+      "gamma": 0.2,
+      "resume": "",
+      "adjust_epochs": [100, 150],
+      "plain": "True",
+      "type": [1, 1, 1, 1]
+    }
+  }
+  
+
+  
