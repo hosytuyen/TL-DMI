@@ -69,9 +69,6 @@ SOTA MI attacks work with a general GAN, therefore. However, Inversion-Specific 
     python train_gan.py --configs path/to/config.json --mode "general"
     ```
 
-Pretrained general GAN and Inversion-Specific GAN can be downloaded at https://drive.google.com/drive/folders/1_oyT_JMBym_jse5HcoivFSv4GkpFN5Nz?usp=share_link
-
-
 ## 5. Learn augmented models
 We provide code to train augmented models (i.e., `efficientnet_b0`, `efficientnet_b1`, and `efficientnet_b3`) from a ***target model***.
 * Modify the configuration in
@@ -82,9 +79,6 @@ We provide code to train augmented models (i.e., `efficientnet_b0`, `efficientne
     ```
     python train_gan.py --configs path/to/config.json
     ```
-
-Pretrained augmented models can be downloaded at https://drive.google.com/drive/folders/12Ib5N9jRkApaVFrUu33S4nexlJwZuCoJ?usp=share_link
-
 
 ## 6. Model Inversion Attack
 
