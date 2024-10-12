@@ -1,4 +1,4 @@
-# Model Inversion Robustness: Can Transfer Learning help?
+# Model Inversion Robustness: Can Transfer Learning help? (CVPR '24)
 
 Other version: https://github.com/ffhibnese/Model-Inversion-Attack-ToolBox
 
